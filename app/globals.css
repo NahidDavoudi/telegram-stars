@@ -76,6 +76,97 @@ h3 {
   box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
 }
 
+/* Products Grid Responsive */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Tablet (≥640px) */
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Mobile Card Styles */
+@media (max-width: 639px) {
+  .card-wrapper {
+    width: 140px !important;
+    height: 180px !important;
+    margin: 0 !important;
+  }
+
+  .card-front,
+  .card-back {
+    border-radius: 12px !important;
+  }
+
+  /* Image Container - Mobile */
+  .card-front > div:first-child {
+    height: 100px !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+  }
+
+  .card-front > div:first-child > div svg {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* Footer - Mobile */
+  .card-front > div:last-child {
+    padding: 8px !important;
+  }
+
+  .card-front > div:last-child > div:first-child {
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .card-front > div:last-child > div:last-child svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .card-front > div:last-child > div:last-child span {
+    font-size: 12px !important;
+  }
+
+  /* Back Side - Mobile */
+  .card-back {
+    padding: 8px !important;
+  }
+
+  .card-back h3 {
+    font-size: 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .card-back p {
+    font-size: 12px !important;
+    -webkit-line-clamp: 2 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .card-back button {
+    height: 36px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+  }
+}
+
 /* Cart Sidebar Responsive */
 @media (max-width: 768px) {
   .cart-sidebar {

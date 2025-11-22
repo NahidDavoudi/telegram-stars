@@ -22,8 +22,10 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
     <section id="plans" className="bg-mint-cream py-12">
       <div className="container mx-auto px-6 max-w-7xl">
         <div 
-          className="flex flex-wrap justify-center"
-          style={{ gap: '0', padding: '24px 0' }}
+          className="products-grid"
+          style={{ 
+            padding: '24px 0'
+          }}
         >
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
@@ -33,4 +35,3 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
     </section>
   );
 }
-
