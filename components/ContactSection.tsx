@@ -1,11 +1,11 @@
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-oxford-navy text-mint-cream py-12">
-      <div className="container mx-auto px-6 max-w-7xl">
-        <div className="text-center mb-8">
+    <section id="contact" className="bg-oxford-navy text-mint-cream py-16">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="text-center mb-10">
           <h2 
             className="text-mint-cream font-bold mb-4"
-            style={{ fontSize: '24px', fontWeight: 700 }}
+            style={{ fontSize: 'clamp(22px, 4vw, 28px)', fontWeight: 700 }}
           >
             تماس با ما
           </h2>
@@ -13,10 +13,18 @@ export default function ContactSection() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-all"
               style={{ 
                 borderRadius: '12px',
-                transition: 'background-color 200ms'
+                transition: 'all 200ms'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <h3 
@@ -33,10 +41,18 @@ export default function ContactSection() {
               </p>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-all"
               style={{ 
                 borderRadius: '12px',
-                transition: 'background-color 200ms'
+                transition: 'all 200ms'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <h3 
@@ -53,10 +69,18 @@ export default function ContactSection() {
               </p>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-all"
               style={{ 
                 borderRadius: '12px',
-                transition: 'background-color 200ms'
+                transition: 'all 200ms'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <h3 
@@ -78,4 +102,3 @@ export default function ContactSection() {
     </section>
   );
 }
-

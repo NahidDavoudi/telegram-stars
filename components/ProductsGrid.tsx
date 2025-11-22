@@ -19,13 +19,11 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
   }
 
   return (
-    <section id="plans" className="bg-mint-cream py-12">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <section id="plans" className="bg-mint-cream py-16">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div 
-          className="products-grid"
-          style={{ 
-            padding: '24px 0'
-          }}
+          className="flex flex-wrap justify-center"
+          style={{ gap: '1rem' }}
         >
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />

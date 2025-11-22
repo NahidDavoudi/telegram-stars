@@ -45,28 +45,40 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
         onClick={onClose}
       />
       <div
-        className={`cart-sidebar fixed top-0 left-0 w-96 h-screen bg-surface shadow-hover z-50 transition-all flex flex-col ${
+        className={`cart-sidebar fixed top-0 left-0 w-full sm:w-96 h-screen bg-surface shadow-hover z-50 transition-all flex flex-col ${
           isOpen ? 'open' : ''
         }`}
         style={{
-          left: isOpen ? '0' : '-24rem',
-          transition: 'left 300ms ease-in-out'
+          left: isOpen ? '0' : '-100%',
+          transition: 'left 300ms ease-in-out',
+          backgroundColor: '#eef4ed'
         }}
       >
         <div 
           className="p-6 border-b border-outline flex justify-between items-center"
-          style={{ borderWidth: '1px' }}
+          style={{ 
+            borderWidth: '1px',
+            borderColor: 'rgba(141, 169, 196, 0.3)'
+          }}
         >
           <h3 
-            className="text-text-primary font-bold"
-            style={{ fontSize: '24px', fontWeight: 700 }}
+            className="font-bold"
+            style={{ 
+              fontSize: '24px', 
+              fontWeight: 700,
+              color: '#134074'
+            }}
           >
             سبد خرید
           </h3>
           <button
             onClick={onClose}
-            className="text-text-secondary hover:text-text-primary transition-colors w-8 h-8 flex items-center justify-center"
-            style={{ transition: 'color 200ms' }}
+            className="hover:text-text-primary transition-colors w-8 h-8 flex items-center justify-center"
+            style={{ 
+              transition: 'color 200ms',
+              color: '#0b2545',
+              fontSize: '32px'
+            }}
           >
             ×
           </button>
@@ -74,8 +86,11 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
         <div className="flex-1 overflow-y-auto p-6">
           {cart.length === 0 ? (
             <p 
-              className="text-center text-text-secondary py-10"
-              style={{ fontSize: '14px' }}
+              className="text-center py-10"
+              style={{ 
+                fontSize: '14px',
+                color: '#0b2545'
+              }}
             >
               سبد خرید شما خالی است
             </p>
@@ -84,19 +99,30 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
               {cart.map((item) => (
                 <div
                   key={item.id}
-                  className="flex justify-between items-center p-4 border-b border-outline mb-2 gap-2"
-                  style={{ borderWidth: '1px' }}
+                  className="flex justify-between items-center p-4 border-b mb-2 gap-2"
+                  style={{ 
+                    borderWidth: '1px',
+                    borderColor: 'rgba(141, 169, 196, 0.3)'
+                  }}
                 >
                   <div className="flex-1">
                     <div 
-                      className="font-medium text-text-primary"
-                      style={{ fontSize: '16px', fontWeight: 500 }}
+                      className="font-medium"
+                      style={{ 
+                        fontSize: '16px', 
+                        fontWeight: 500,
+                        color: '#134074'
+                      }}
                     >
                       {item.title}
                     </div>
                     <div 
-                      className="text-primary font-medium"
-                      style={{ fontSize: '14px', fontWeight: 500 }}
+                      className="font-medium"
+                      style={{ 
+                        fontSize: '14px', 
+                        fontWeight: 500,
+                        color: '#0b2545'
+                      }}
                     >
                       {formatPrice(item.price)}
                     </div>
@@ -104,29 +130,42 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="border border-outline text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
+                      className="border text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors"
                       style={{ 
                         borderWidth: '1px',
                         borderRadius: '10px',
-                        transition: 'background-color 200ms'
+                        transition: 'background-color 200ms',
+                        borderColor: 'rgba(141, 169, 196, 0.5)',
+                        color: '#134074',
+                        backgroundColor: 'transparent'
                       }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(141, 169, 196, 0.1)'}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                     >
                       −
                     </button>
                     <span 
-                      className="min-w-6 text-center font-medium text-text-primary"
-                      style={{ fontSize: '14px' }}
+                      className="min-w-6 text-center font-medium"
+                      style={{ 
+                        fontSize: '14px',
+                        color: '#134074'
+                      }}
                     >
                       {item.quantity}
                     </span>
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="border border-outline text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
+                      className="border text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors"
                       style={{ 
                         borderWidth: '1px',
                         borderRadius: '10px',
-                        transition: 'background-color 200ms'
+                        transition: 'background-color 200ms',
+                        borderColor: 'rgba(141, 169, 196, 0.5)',
+                        color: '#134074',
+                        backgroundColor: 'transparent'
                       }}
+                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(141, 169, 196, 0.1)'}
+                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                     >
                       +
                     </button>
@@ -160,25 +199,43 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
           )}
         </div>
         <div 
-          className="p-6 border-t border-outline"
-          style={{ borderWidth: '1px' }}
+          className="p-6 border-t"
+          style={{ 
+            borderWidth: '1px',
+            borderColor: 'rgba(141, 169, 196, 0.3)'
+          }}
         >
           <div 
-            className="flex justify-between mb-6 font-medium text-text-primary"
-            style={{ fontSize: '18px', fontWeight: 500 }}
+            className="flex justify-between mb-6 font-medium"
+            style={{ 
+              fontSize: '18px', 
+              fontWeight: 500,
+              color: '#134074'
+            }}
           >
             <span>جمع کل:</span>
             <span>{formatPrice(getTotal())}</span>
           </div>
           <button
             onClick={handleCheckout}
-            className="w-full text-white font-medium transition-colors hover:bg-oxford-navy"
+            className="w-full text-white font-medium transition-all"
             style={{
               backgroundColor: '#134074',
-              borderRadius: '10px',
+              borderRadius: '12px',
               padding: '12px 18px',
               fontWeight: 500,
-              transition: 'background-color 200ms'
+              transition: 'all 300ms',
+              boxShadow: '0 2px 8px rgba(19, 64, 116, 0.2)'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#0b2545';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(19, 64, 116, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#134074';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(19, 64, 116, 0.2)';
             }}
           >
             تسویه حساب
@@ -188,4 +245,3 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
     </>
   );
 }
-

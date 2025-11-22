@@ -13,26 +13,28 @@ export default function Header() {
     <>
       <header 
         className="bg-regal-navy text-white sticky top-0 z-50"
-        style={{ height: '64px', boxShadow: '0 1px 2px rgba(0,0,0,0.06)' }}
+        style={{ 
+          height: '72px', 
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)' 
+        }}
       >
-        <div className="container mx-auto px-6 h-full flex items-center justify-between">
-          {/* Logo - Right side */}
+        <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
           <h1 
             className="text-white font-bold"
-            style={{ fontSize: '20px', fontWeight: 700 }}
+            style={{ 
+              fontSize: 'clamp(18px, 4vw, 24px)', 
+              fontWeight: 700 
+            }}
           >
             Telegram Stars
           </h1>
 
-          {/* Middle: Empty space */}
-
-          {/* Left side: Button */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => setIsCartOpen(true)}
               className="relative bg-white/10 hover:bg-white/20 px-4 py-2 text-white transition-colors"
               style={{ 
-                borderRadius: '10px',
+                borderRadius: '12px',
                 transition: 'background-color 200ms'
               }}
             >
@@ -62,4 +64,3 @@ export default function Header() {
     </>
   );
 }
-
