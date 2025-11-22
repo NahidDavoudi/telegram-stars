@@ -14,7 +14,7 @@ export default function Home() {
     <Layout>
       <HeroSection />
       <WaveDivider 
-        colors={['#a2d9ff', '#8bcfff', '#74c6ff']}
+        colors={['#a8c0d8', '#9bb5d0', '#8da9c4']}
         layers={3}
       />
       <ProductsGrid products={products} />

@@ -8,7 +8,7 @@ interface WaveDividerProps {
 }
 
 const WaveDivider: React.FC<WaveDividerProps> = ({
-  colors = ['#a8c0d8', '#95b3cc', '#8da9c4'],
+  colors = ['#a8c0d8', '#9bb5d0', '#8da9c4'], // طیف powder-blue (#8da9c4)
   layers = 3,
   height = 'h-24 sm:h-32 md:h-40',
   className = ''
@@ -16,7 +16,7 @@ const WaveDivider: React.FC<WaveDividerProps> = ({
   const waveColors = colors.slice(0, layers);
   
   while (waveColors.length < layers) {
-    waveColors.push(waveColors[waveColors.length - 1] || '#a8c0d8');
+    waveColors.push(waveColors[waveColors.length - 1] || '#8da9c4');
   }
 
   const wavePaths = [

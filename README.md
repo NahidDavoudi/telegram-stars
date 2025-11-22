@@ -1,71 +1,50 @@
-# فروشگاه Telegram Stars - Next.js
-
-پروژه فروشگاه Telegram Stars با Next.js 14، TypeScript و Tailwind CSS
-
-## ویژگی‌ها
-
-- ✅ Next.js 14 با App Router
-- ✅ TypeScript
-- ✅ Tailwind CSS با پالت رنگی سفارشی
-- ✅ Flip Card برای محصولات
-- ✅ مدیریت State با React Context
-- ✅ Responsive Design
-- ✅ آماده برای API و پنل مدیریت
+# Telegram Stars Shop - پروژه فروشگاه استارهای تلگرام
 
 ## نصب و راه‌اندازی
 
 ```bash
+# نصب dependencies
 npm install
+
+# اجرای پروژه در حالت development
 npm run dev
+
+# ساخت نسخه production
+npm run build
 ```
 
-باز کردن [http://localhost:3000](http://localhost:3000)
-
-## ساختار پروژه
+## ساختار فایل‌ها
 
 ```
-telegram-stars/
-├── app/
-│   ├── api/          # API routes
-│   ├── globals.css   # Global styles
-│   ├── layout.tsx    # Root layout
-│   ├── page.tsx      # Home page
-│   └── providers.tsx # Context providers
-├── components/       # React components
-├── contexts/         # Context providers
-├── data/            # JSON data files
-├── lib/             # Utility functions
-└── types/           # TypeScript types
+components/
+  ├── CartSidebar.tsx      # سایدبار سبد خرید
+  ├── ContactSection.tsx   # بخش تماس با ما
+  ├── Footer.tsx           # فوتر سایت
+  ├── Header.tsx           # هدر و منوی بالا
+  ├── HeroSection.tsx      # بخش اصلی (Hero)
+  ├── Layout.tsx           # Layout کلی صفحه
+  ├── ProductCard.tsx      # کارت محصول با قابلیت flip
+  ├── ProductsGrid.tsx     # گرید محصولات
+  └── WaveDivider.tsx      # موج جداکننده بخش‌ها
 ```
-
-## کامپوننت‌ها
-
-- `Header` - هدر با سبد خرید
-- `HeroSection` - بخش هیرو
-- `ProductsGrid` - گرید محصولات
-- `ProductCard` - کارت محصول با flip
-- `ContactSection` - بخش تماس
-- `CartSidebar` - سایدبار سبد خرید
-- `Footer` - فوتر
-- `Layout` - Layout اصلی
-
-## API Routes
-
-- `GET /api/products` - دریافت لیست محصولات
-- `POST /api/cart` - به‌روزرسانی سبد خرید
 
 ## پالت رنگی
 
-- `regal-navy`: #134074
-- `oxford-navy`: #13315c
-- `prussian-blue`: #0b2545
-- `powder-blue`: #8da9c4
-- `mint-cream`: #eef4ed
+- **regal-navy** (#134074): هدر، دکمه‌های اصلی
+- **oxford-navy** (#13315c): فوتر، بخش تماس
+- **prussian-blue** (#0b2545): تیترها و متن‌های اصلی
+- **powder-blue** (#8da9c4): پس‌زمینه Hero
+- **mint-cream** (#eef4ed): پس‌زمینه کارت‌ها
 
-## توسعه آینده
+## ویژگی‌ها
 
-- پنل مدیریت
-- اتصال به دیتابیس
-- سیستم احراز هویت
-- درگاه پرداخت
+✅ طراحی Material Design
+✅ کاملاً ریسپانسیو (Mobile, Tablet, Desktop)
+✅ کارت‌های محصول با انیمیشن Flip
+✅ سبد خرید با قابلیت افزودن/حذف
+✅ موج‌های جداکننده بین بخش‌ها
+✅ انیمیشن‌های Hover روی دکمه‌ها
 
+## توسعه‌دهنده
+
+ساخته شده با ❤️ برای NadAgro
