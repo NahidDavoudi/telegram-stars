@@ -12,8 +12,8 @@ export default function Header() {
   return (
     <>
       <header 
-        className="bg-regal-navy text-white sticky top-0 z-50 shadow-header-subtle"
-        style={{ height: '64px' }}
+        className="bg-regal-navy text-white sticky top-0 z-50"
+        style={{ height: '64px', boxShadow: '0 1px 2px rgba(0,0,0,0.06)' }}
       >
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           {/* Logo - Right side */}
@@ -30,8 +30,9 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative bg-white/10 hover:bg-white/20 rounded-button px-4 py-2 text-white transition-colors"
+              className="relative bg-white/10 hover:bg-white/20 px-4 py-2 text-white transition-colors"
               style={{ 
+                borderRadius: '10px',
                 transition: 'background-color 200ms'
               }}
             >

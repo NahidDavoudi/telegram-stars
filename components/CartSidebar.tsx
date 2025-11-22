@@ -104,9 +104,10 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                      className="border border-outline text-text-primary w-8 h-8 rounded-button cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
+                      className="border border-outline text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
                       style={{ 
                         borderWidth: '1px',
+                        borderRadius: '10px',
                         transition: 'background-color 200ms'
                       }}
                     >
@@ -120,9 +121,10 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
                     </span>
                     <button
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="border border-outline text-text-primary w-8 h-8 rounded-button cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
+                      className="border border-outline text-text-primary w-8 h-8 cursor-pointer font-medium flex items-center justify-center transition-colors hover:bg-hover-bg"
                       style={{ 
                         borderWidth: '1px',
+                        borderRadius: '10px',
                         transition: 'background-color 200ms'
                       }}
                     >
@@ -130,8 +132,11 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
                     </button>
                     <button
                       onClick={() => removeFromCart(item.id)}
-                      className="bg-transparent border-none text-red-500 cursor-pointer p-1 flex items-center justify-center transition-colors rounded-button hover:bg-red-50"
-                      style={{ transition: 'background-color 200ms' }}
+                      className="bg-transparent border-none text-red-500 cursor-pointer p-1 flex items-center justify-center transition-colors hover:bg-red-50"
+                      style={{ 
+                        borderRadius: '10px',
+                        transition: 'background-color 200ms' 
+                      }}
                       title="حذف"
                     >
                       <svg

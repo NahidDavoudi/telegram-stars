@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className={`card ${isFlipped ? 'flipped' : ''}`}>
         {/* FRONT SIDE - SPEC Compliant */}
-        <div className="card-front bg-mint-cream rounded-card shadow-idle overflow-hidden flex flex-col">
+        <div className="card-front bg-mint-cream overflow-hidden flex flex-col" style={{ borderRadius: '12px', boxShadow: '0 3px 6px rgba(0,0,0,0.08)' }}>
           {/* Image */}
           <div 
             className="relative overflow-hidden"
@@ -92,8 +92,10 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* BACK SIDE - SPEC Compliant */}
         <div 
-          className="card-back bg-mint-cream rounded-card shadow-idle overflow-hidden flex flex-col"
+          className="card-back bg-mint-cream overflow-hidden flex flex-col"
           style={{ 
+            borderRadius: '12px',
+            boxShadow: '0 3px 6px rgba(0,0,0,0.08)',
             padding: '16px',
             direction: 'rtl',
             textAlign: 'right'

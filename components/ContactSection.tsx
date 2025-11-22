@@ -13,8 +13,9 @@ export default function ContactSection() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 rounded-card p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
               style={{ 
+                borderRadius: '12px',
                 transition: 'background-color 200ms'
               }}
             >
@@ -32,8 +33,9 @@ export default function ContactSection() {
               </p>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 rounded-card p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
               style={{ 
+                borderRadius: '12px',
                 transition: 'background-color 200ms'
               }}
             >
@@ -51,8 +53,9 @@ export default function ContactSection() {
               </p>
             </div>
             <div 
-              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 rounded-card p-6 transition-colors hover:bg-white/15"
+              className="bg-white/10 backdrop-blur-sm border border-powder-blue/20 p-6 transition-colors hover:bg-white/15"
               style={{ 
+                borderRadius: '12px',
                 transition: 'background-color 200ms'
               }}
             >
