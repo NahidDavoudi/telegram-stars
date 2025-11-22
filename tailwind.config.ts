@@ -9,14 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Material Minimalism Color System
-        primary: '#6200EE',
-        'primary-variant': '#7E3FF2',
-        secondary: '#03DAC5',
+        // Original Color Palette
+        'regal-navy': '#134074',      // هدر، دکمه‌های اصلی، متن‌های رسمی و تیترهای مهم
+        'oxford-navy': '#13315c',    // فوتر، بخش ویژگی‌ها و تماس، دکمه‌های ثانویه
+        'prussian-blue': '#0b2545',  // تیترها و متن‌های جزئیات
+        'powder-blue': '#8da9c4',    // پس‌زمینه بخش Hero، برچسب‌ها و تگ‌های دعوت‌کننده
+        'mint-cream': '#eef4ed',     // پس‌زمینه کارت‌ها و بخش محصولات، متن‌های روشن روی رنگ‌های تیره
+        // Keep Material colors for compatibility
+        primary: '#134074',
+        'primary-variant': '#13315c',
         surface: '#FFFFFF',
-        background: '#F6F7F9',
+        background: '#eef4ed',
         outline: '#E4E7EB',
-        'text-primary': '#1A1A1A',
+        'text-primary': '#0b2545',
         'text-secondary': '#555',
         'hover-bg': '#F2F3F7',
       },

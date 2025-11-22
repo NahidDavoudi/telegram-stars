@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     >
       <div className={`card ${isFlipped ? 'flipped' : ''}`}>
         {/* FRONT SIDE - SPEC Compliant */}
-        <div className="card-front bg-surface rounded-card shadow-idle overflow-hidden flex flex-col">
+        <div className="card-front bg-mint-cream rounded-card shadow-idle overflow-hidden flex flex-col">
           {/* Image */}
           <div 
             className="relative overflow-hidden"
@@ -47,11 +47,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             }}
           >
             <div 
-              className="w-full h-full bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center"
+              className="w-full h-full bg-gradient-to-br from-powder-blue/20 to-powder-blue/10 flex items-center justify-center"
               style={{ objectFit: 'cover' }}
             >
               <svg
-                className="w-20 h-20 text-primary/30"
+                className="w-20 h-20 text-powder-blue/30"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -64,7 +64,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="px-4 py-2 flex flex-col flex-1">
             {/* Price */}
             <div 
-              className="text-primary font-medium mb-2"
+              className="text-regal-navy font-medium mb-2"
               style={{ fontSize: '16px', fontWeight: 500 }}
             >
               {formatNumber(product.price)} تومان
@@ -73,7 +73,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {/* Stars count */}
             <div className="flex items-center gap-2">
               <svg
-                className="text-text-secondary"
+                className="text-prussian-blue/70"
                 style={{ width: '18px', height: '18px' }}
                 fill="currentColor"
                 viewBox="0 0 20 20"
@@ -81,7 +81,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
               <span 
-                className="text-text-secondary"
+                className="text-prussian-blue/70"
                 style={{ fontSize: '14px' }}
               >
                 {formatNumber(product.amount)} Stars
@@ -92,7 +92,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* BACK SIDE - SPEC Compliant */}
         <div 
-          className="card-back bg-surface rounded-card shadow-idle overflow-hidden flex flex-col"
+          className="card-back bg-mint-cream rounded-card shadow-idle overflow-hidden flex flex-col"
           style={{ 
             padding: '16px',
             direction: 'rtl',
@@ -101,7 +101,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         >
           {/* Title */}
           <h3 
-            className="text-text-primary font-bold mb-2"
+            className="text-prussian-blue font-bold mb-2"
             style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}
           >
             {product.title}
@@ -109,7 +109,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           {/* Description */}
           <p 
-            className="text-text-secondary flex-1 mb-4"
+            className="text-prussian-blue/70 flex-1 mb-4"
             style={{ 
               fontSize: '14px',
               fontWeight: 400,
@@ -126,10 +126,10 @@ export default function ProductCard({ product }: ProductCardProps) {
           {/* Buy Button */}
           <button
             onClick={handleBuyClick}
-            className="w-full text-white font-medium transition-colors hover:bg-primary-variant"
+            className="w-full text-white font-medium transition-colors hover:bg-oxford-navy"
             style={{
               height: '44px',
-              backgroundColor: '#6200EE',
+              backgroundColor: '#134074',
               borderRadius: '10px',
               fontWeight: 500,
               transition: 'background-color 200ms'

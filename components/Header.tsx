@@ -12,13 +12,13 @@ export default function Header() {
   return (
     <>
       <header 
-        className="bg-surface sticky top-0 z-50 shadow-header-subtle"
+        className="bg-regal-navy text-white sticky top-0 z-50 shadow-header-subtle"
         style={{ height: '64px' }}
       >
         <div className="container mx-auto px-6 h-full flex items-center justify-between">
           {/* Logo - Right side */}
           <h1 
-            className="text-text-primary font-bold"
+            className="text-white font-bold"
             style={{ fontSize: '20px', fontWeight: 700 }}
           >
             Telegram Stars
@@ -30,9 +30,8 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative border border-outline rounded-button px-4 py-2 text-text-primary hover:bg-hover-bg transition-colors"
+              className="relative bg-white/10 hover:bg-white/20 rounded-button px-4 py-2 text-white transition-colors"
               style={{ 
-                borderWidth: '1px',
                 transition: 'background-color 200ms'
               }}
             >
@@ -50,7 +49,7 @@ export default function Header() {
                 />
               </svg>
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-primary text-white text-xs font-medium w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-medium w-5 h-5 rounded-full flex items-center justify-center">
                   {totalItems}
                 </span>
               )}

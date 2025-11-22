@@ -167,9 +167,9 @@ export default function CartSidebar({ isOpen, onClose }: CartSidebarProps) {
           </div>
           <button
             onClick={handleCheckout}
-            className="w-full text-white font-medium transition-colors hover:bg-primary-variant"
+            className="w-full text-white font-medium transition-colors hover:bg-oxford-navy"
             style={{
-              backgroundColor: '#6200EE',
+              backgroundColor: '#134074',
               borderRadius: '10px',
               padding: '12px 18px',
               fontWeight: 500,
